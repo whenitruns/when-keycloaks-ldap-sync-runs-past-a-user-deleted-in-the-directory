@@ -1,0 +1,25 @@
+{
+  "name": "rr14-ldap",
+  "providerId": "ldap",
+  "providerType": "org.keycloak.storage.UserStorageProvider",
+  "parentId": "rr14",
+  "config": {
+    "enabled": ["true"],
+    "vendor": ["rhds"],
+    "connectionUrl": ["ldap://rr14-ldap:3389"],
+    "authType": ["simple"],
+    "bindDn": ["cn=Directory Manager"],
+    "bindCredential": ["rr14-dm-dummy"],
+    "usersDn": ["ou=people,dc=rr14,dc=test"],
+    "usernameLDAPAttribute": ["uid"],
+    "rdnLDAPAttribute": ["uid"],
+    "uuidLDAPAttribute": ["nsuniqueid"],
+    "userObjectClasses": ["inetOrgPerson, organizationalPerson"],
+    "searchScope": ["1"],
+    "editMode": ["READ_ONLY"],
+    "importEnabled": ["true"],
+    "syncRegistrations": ["false"],
+    "fullSyncPeriod": ["-1"],
+    "changedSyncPeriod": ["-1"]
+  }
+}
